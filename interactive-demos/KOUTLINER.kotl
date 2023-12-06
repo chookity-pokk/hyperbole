@@ -1,0 +1,65 @@
+;; -*- Mode: kotl -*- 
+"Kotl-4.0" ;; file-format
+
+   1. Koutliner is part of the Hyperbole information management
+   system.
+
+   2. The Koutliner produces hierarchically structered files consisting of trees of cells.
+
+     2a. A Cell is an element of the outline which has its own display
+         label and unique, permanent identifier (idstamp).
+
+     2b. Idstamps support the creation of hyperlinks to cells which are maintained as the structure of the outline changes.
+
+   3. Starting a Koutline:
+
+     3a. First things first, go ahead and create a file that has the
+         extension ".kotl". It should start with the 1. at the
+         top. You'll just go ahead and add some text to that first
+         cell, and when you are ready to add another cell just use {C-j}.
+
+     3b. Using {C-j} launches a new cell as a sibling after the
+         current cell. To add a cell that is a non-negative prefix
+         argument, use {C-u C-j} or {C-c a} which will add the cell as
+         a child of the current cell. Examples of this are used above
+         with {C-j} on the 1. creating 2. and {C-c a} on the
+         2. creating the 2a. After creating 2a. we use {C-j} again to
+            create 2b.
+
+     3c. Now that we know how to create more cells and add a child to
+         the current cell, lets talk about the autonumbering. Full
+         auto-numbering in Augment (1a2) or legal (1.1.2) formats. You
+         can change the format by using {C-c C-l} and select and
+         option. For the purpose of this I am using the legal format
+         because I find it easier to refer to but feel free to use
+         whichever you are more comfortable with. :TODO: Change the
+         above definition to legal rather than Augment.
+
+
+"ben" ;; kvspec:current
+12 ;; id-counter
+alpha ;; label-type
+4 ;; label-min-width
+". " ;; label-separator
+3 ;; level-indent
+
+;; depth-first kcell attributes
+[[0
+  (creator "hankgreenburg@Hanks-MBP.lan" create-time "20231001:18:50:48" id-counter 12)]
+ [1
+  (creator "hankgreenburg@Hanks-MBP.lan" create-time "20231001:18:50:48")]
+ [2
+  (creator "hankgreenburg@Hanks-MBP.lan" create-time "20231001:19:01:45")]
+ [4
+  (creator "hankgreenburg@Hanks-MBP.lan" create-time "20231001:19:02:12")]
+ [7
+  (creator "hankgreenburg@Hanks-MBP.lan" create-time "20231001:19:03:17")]
+ [8
+  (creator "hankgreenburg@Hanks-MBP.lan" create-time "20231001:19:03:56")]
+ [10
+  (creator "hankgreenburg@Hanks-MBP.lan" create-time "20231001:19:04:35")]
+ [11
+  (creator "hankgreenburg@Hanks-MBP.lan" create-time "20231001:19:06:02")]
+ [12
+  (creator "hankgreenburg@Hanks-MBP.lan" create-time "20231001:19:08:09")]
+ nil nil nil nil]
